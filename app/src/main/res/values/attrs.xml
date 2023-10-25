@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FollowersIndicator">
+
+        <attr name="counter" format="string"/>
+        <attr name="indicator" format="string"/>
+        <attr name="bold" format="boolean"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="DayAttendancePicker">
+        <attr name="month" format="string"/>
+        <attr name="showBackArrow" format="boolean"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="CircularItemsView">
+        <attr name="labelText" format="string"/>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.FragmentLogin">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_label_part1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-60dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Salon"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_label_part2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="-14dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Premium"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tv_label_part1"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_part1" />
+
+        <TextView
+            android:id="@+id/tv_label_part3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-14dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="client"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/tv_label_part2"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_part2" />
+
+
+        <TextView
+            android:id="@+id/tv_label_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingEnd="5dp"
+            android:scaleX="0.9"
+            android:scaleY="1.4"
+            android:text="e-mail"
+            android:textColor="@color/alt_black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/arrowBackToLogin" />
+
+        <EditText
+            android:id="@+id/et_email_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edit_text_border"
+            android:inputType="text"
+            android:paddingVertical="20dp"
+            android:paddingStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_login" />
+
+
+        <TextView
+            android:id="@+id/tv_label_senha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingEnd="5dp"
+            android:scaleX="0.9"
+            android:scaleY="1.4"
+            android:text="senha"
+            android:textColor="@color/alt_black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_email_login" />
+
+        <EditText
+            android:id="@+id/et_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edit_text_border"
+            android:inputType="textPassword"
+            android:paddingVertical="20dp"
+            android:paddingStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_senha" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="66dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="56dp"
+            android:backgroundTint="@color/alt_black2"
+            android:paddingVertical="15dp"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius="22dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_cadastro_senha_confirmacao" />
+
+
+        <TextView
+            android:id="@+id/tv_label_registrar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:scaleX="0.9"
+            android:scaleY="1.4"
+            android:text="cliente novo? cadastre-se"
+            android:textAlignment="center"
+            android:textColor="@color/alt_black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnLogin" />
+
+
+        <TextView
+            android:id="@+id/tv_label_esqueceu_senha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:scaleX="0.9"
+            android:scaleY="1.4"
+            android:text="esqueceu a senha?"
+            android:textAlignment="center"
+            android:textColor="@color/alt_black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_registrar"
+
+            />
+
+
+        <ImageView
+            android:id="@+id/arrowBackToLogin"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:clickable="false"
+            android:paddingStart="5dp"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_part3" />
+
+        <TextView
+            android:id="@+id/tv_label_cadastro_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingEnd="5dp"
+            android:scaleX="0.9"
+            android:visibility="gone"
+            android:scaleY="1.4"
+            android:text="e-mail   "
+            android:textColor="@color/alt_black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_senha" />
+
+        <EditText
+            android:id="@+id/et_email_cadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"
+            android:background="@drawable/edit_text_border"
+            android:paddingVertical="20dp"
+            android:paddingStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_cadastro_email" />
+
+        <TextView
+            android:id="@+id/tv_label_cadastro_senha"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingEnd="5dp"
+            android:scaleX="0.9"
+            android:scaleY="1.4"
+            android:text="senha   "
+            android:visibility="gone"
+            android:textColor="@color/alt_black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_email_cadastro" />
+
+        <EditText
+            android:id="@+id/et_cadastro_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edit_text_border"
+            android:inputType="textPassword"
+            android:paddingVertical="20dp"
+            android:paddingStart="16dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_cadastro_senha" />
+
+        <TextView
+            android:id="@+id/tv_label_cadastro_senha_confirmacao"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingEnd="5dp"
+            android:scaleX="0.9"
+            android:scaleY="1.4"
+            android:text="confirme a senha   "
+            android:textColor="@color/alt_black"
+            android:textSize="20sp"
+            android:visibility="gone"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_cadastro_senha" />
+
+        <EditText
+            android:id="@+id/et_cadastro_senha_confirmacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/edit_text_border"
+            android:inputType="textPassword"
+            android:paddingVertical="20dp"
+            android:visibility="gone"
+            android:paddingStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_label_cadastro_senha_confirmacao" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

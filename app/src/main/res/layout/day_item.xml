@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingEnd="20dp"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvLabelDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/alt_black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Mo" />
+
+
+    <ImageView
+        android:id="@+id/ivNumberBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/black_circle_background"
+        app:layout_constraintTop_toTopOf="@id/tvNumberDay"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/tvNumberDay"
+        app:layout_constraintEnd_toEndOf="@id/tvNumberDay"
+        app:layout_constraintBottom_toBottomOf="@id/tvNumberDay"/>
+
+
+    <TextView
+        android:id="@+id/tvNumberDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="15dp"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="5dp"
+        android:textColor="@color/alt_black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelDay"
+        tools:text="7" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

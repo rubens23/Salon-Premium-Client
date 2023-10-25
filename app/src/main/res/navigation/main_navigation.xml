@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/fragmentLogin">
+
+    <fragment
+        android:id="@+id/marcarHorariosFragment"
+        android:name="com.rubens.salonpremiumclient.view.FragmentAgendarAtendimentos"
+        android:label="Marcar Horários"
+        tools:layout="@layout/fragment_agendar_atendimentos" >
+        <action
+            android:id="@+id/action_fragmentMarcarHorario_to_fragmentAgenda"
+            app:destination="@id/agenda" />
+    </fragment>
+    <fragment
+        android:id="@+id/agenda"
+        android:name="com.rubens.salonpremiumclient.view.FragmentAgenda"
+        android:label="Agenda"
+        tools:layout="@layout/fragment_agenda" />
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.rubens.salonpremiumclient.view.FragmentLogin"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+</navigation>

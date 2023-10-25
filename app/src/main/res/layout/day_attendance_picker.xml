@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLabelMonth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:textColor="@color/alt_black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/arrowPreviousMonth"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="February" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLabelYear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:textColor="@color/alt_black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@id/tvLabelMonth"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2022" />
+
+    <ImageView
+        android:id="@+id/arrowNextMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvLabelMonth"
+        app:layout_constraintBottom_toBottomOf="@id/tvLabelMonth"
+        android:layout_marginEnd="46dp"
+        android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
+
+    <ImageView
+        android:id="@+id/backgroundForwardArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:src="@drawable/black_circle_background"
+        app:layout_constraintTop_toTopOf="@id/arrowNextMonth"
+        app:layout_constraintStart_toStartOf="@id/arrowNextMonth"
+        app:layout_constraintEnd_toEndOf="@id/arrowNextMonth"
+        android:elevation="-2dp"
+        app:layout_constraintBottom_toBottomOf="@id/arrowNextMonth"/>
+
+
+    <ImageView
+        android:id="@+id/arrowPreviousMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:clickable="false"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvLabelMonth"
+        app:layout_constraintBottom_toBottomOf="@id/tvLabelMonth"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+
+    <ImageView
+        android:id="@+id/backgroundBackArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/black_circle_background"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@id/arrowPreviousMonth"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/arrowPreviousMonth"
+        android:elevation="-2dp"
+        app:layout_constraintBottom_toBottomOf="@id/arrowPreviousMonth"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/daysOfMonthRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/day_item"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/arrowPreviousMonth"
+        app:layout_constraintEnd_toEndOf="@id/arrowNextMonth"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelMonth"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
