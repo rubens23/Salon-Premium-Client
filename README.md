@@ -33,3 +33,25 @@
 ## Download do App
 
 Faça o download do <a href="apk/app-debug.apk?raw=true">APK diretamente</a>. Você pode ver <a href="https://www.google.com/search?q=como+instalar+um+apk+no+android">aqui</a> como instalar um APK no seu aparelho android!
+
+## Tecnologias usadas
+
+- Minimum SDK level 24
+- [Linguagem Kotlin](https://kotlinlang.org/)
+
+- Componentes da SDK do android que foram utilizados:
+  - Navigation: Utilizado para facilitar a navegação entre os fragments do meu app. Fiz a integração com a bottom navigation view para conseguir gerenciar facilmente a seleção dos destinos e back stack.
+  - viewModel: Faz parte do MVVM que usei para organizar meu projeto. Minhas viewModels servem como acesso aos meus repositories de acesso a data source(que nesse caso são algumas apis do firebase) e essa classe tambem tem como membros as variaveis que se atualizadas devem desencadear alguma mudança na tela.
+  - fragment: nesse projeto utilizei fragments para organizar a lógica das minhas diferentes telas.
+  - SharedFlow: Esse componente vem das bibliotecas do kotlin e me ajuda a fornecer um componente que avisa à tela que precisa ser atualizada. Escolhi o sharedFlow pois, à princípio, não queria guardar os valores já emitidos em cache. Mas talvez eu mude isso no futuro.
+  - viewBinding: Essa biblioteca me ajuda muito quando eu utilizo xmls para fazer minhas telas. Eu consigo acessar facilmente os componentes dos layouts sem ter que escrever muito.
+
+- Outras dependências:
+  - CircleImageView: utilizei essa biblioteca do github para usar imageviews arredondadas e bordas para representar seleções. É uma biblioteca que já utilizo há algum tempo porque funciona muito bem quando estou usando xmls.
+  - MonthSelector: utilizei essa biblioteca que eu mesmo criei e que serve para fornecer uma view para selecionar meses do ano.
+  - DaggerHilt: Biblioteca incrível que facilita a injeção de dependências nas minhas classes. Você pode dividir tudo por modulos e deixar tudo bem separadinho, para cada objeto ir para onde precisa ir e as vezes sem criar instancias repetidas.
+  - Glide: usei o glide também. Essa biblioteca é principalmente útil quando você quer consumir uma imagem que vem de uma url e já fazer transformações na imagem.
+  - FirebaseAuth: Nesse projeto utilizei o firebaseAuth para implementar o cadastro e login dos usuários.
+  - FirebaseDatabase: Utilizei o banco de dados do firebase para salvar coisas que precisavam ser persistidas como agendamentos, dados de perfil dos clientes e etc.
+  - FirebaseStorage: usei para salvar arquivos de foto como a foto de perfil dos usuários.
+
