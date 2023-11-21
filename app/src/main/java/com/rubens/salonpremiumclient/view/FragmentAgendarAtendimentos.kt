@@ -123,7 +123,6 @@ class FragmentAgendarAtendimentos : Fragment(), ServiceClickListener, EmployeeCl
                 )
             )
 
-            Toast.makeText(requireContext(), "cliquei na seta de retornar", Toast.LENGTH_SHORT).show()
             showDayBackArrowBackground(true)
             showDayForwardArrowBackground(false)
 
@@ -149,7 +148,6 @@ class FragmentAgendarAtendimentos : Fragment(), ServiceClickListener, EmployeeCl
                 )
             )
 
-            Toast.makeText(requireContext(), "cliquei na seta de avancar", Toast.LENGTH_SHORT).show()
             showDayForwardArrowBackground(true)
             showDayBackArrowBackground(false)
 

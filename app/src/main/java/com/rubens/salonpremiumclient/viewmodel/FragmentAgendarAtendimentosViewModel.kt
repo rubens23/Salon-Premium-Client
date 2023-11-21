@@ -36,6 +36,7 @@ class FragmentAgendarAtendimentosViewModel @Inject constructor(
     var anoSelecionado: String = ""
     lateinit var mesAtual: String
     lateinit var anoAtual: String
+    lateinit var userData: Cliente
 
 
     /**
@@ -313,7 +314,7 @@ class FragmentAgendarAtendimentosViewModel @Inject constructor(
                 employee = employee!!.name,
                 hour = periodoDoDiaSelecionado!!.horaDoDia,
                 service = service!!.serviceName,
-                clientName = "Rubens",
+                clientName = userData.nomeCliente.capitalize(),
                 employeeKey = employee!!.employeeKey,
                 appointmentDayFormatted = obterDataFormatada(
                     dataDeAtendimentoSelecionada!!.numberDay,
@@ -346,6 +347,7 @@ class FragmentAgendarAtendimentosViewModel @Inject constructor(
         firebaseRepository.pegarDadosDoUser{
                 cliente->
             viewModelScope.launch {
+                userData = cliente
                 _pegouDadosDoCliente.emit(cliente)
             }
 
