@@ -29,3 +29,7 @@
 <img alt="screenshot" width="30%" src="app/src/main/appscreenshots/5-portrait.png"/>
 
 </p>
+
+## Download do App
+
+Faça o download do <a href="apk/app-debug.apk?raw=true">APK diretamente</a>. Você pode ver <a href="https://www.google.com/search?q=como+instalar+um+apk+no+android">aqui</a> como instalar um APK no seu aparelho android!
