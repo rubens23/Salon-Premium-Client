@@ -54,4 +54,42 @@ Faça o download do <a href="apk/app-debug.apk?raw=true">APK diretamente</a>. Vo
   - FirebaseAuth: Nesse projeto utilizei o firebaseAuth para implementar o cadastro e login dos usuários.
   - FirebaseDatabase: Utilizei o banco de dados do firebase para salvar coisas que precisavam ser persistidas como agendamentos, dados de perfil dos clientes e etc.
   - FirebaseStorage: usei para salvar arquivos de foto como a foto de perfil dos usuários.
+ 
+## Arquitetura
+Nesse app utilizei a arquitetura [MVVM] que é uma arquitetura que já uso há bastante tempo para organizar meu código deixando-o mais legível e escalável.
+(https://developer.android.com/topic/architecture).
+</br></br>
+
+## Principais Funcionalidades
+
+### Agendamento de atendimentos no salão de beleza
+<img alt="screenshot" width="30%" src="app/src/main/appscreenshots/6-portrait.png"/>
+
+### Visualização se o pedido de atendimento já foi aceito ou não
+<img alt="screenshot" width="30%" src="app/src/main/appscreenshots/5-portrait.png"/>
+
+### Visualização dos funcionários, serviços e horários disponíveis para o atendimento
+<img alt="screenshot" width="30%" src="app/src/main/appscreenshots/3-portrait.png"/>
+
+# Licença
+
+
+
+```xml
+    Copyright [2023] [Rubens Francisco de Assis]
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+```
+
 
